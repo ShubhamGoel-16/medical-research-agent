@@ -1,7 +1,6 @@
-# main.py
 import os
 import json
-from utils import call_llm, fetch_arxiv_papers
+from utils import call_llm, fetch_semantic_scholar
 import prompts
 
 def run_agent(user_query, provider="openai"):
@@ -25,11 +24,12 @@ def run_agent(user_query, provider="openai"):
     # ==========================================
     # STEP 2: Paper Retrieval (Tool Call)
     # ==========================================
-    print("[Step 2] Executing Tool Call to ArXiv API...")
-    raw_abstracts = fetch_arxiv_papers(agent_state["search_query"])
+    print("[Step 2] Executing Tool Call to Semantic Scholar API...")
+    
+    # Call the new function!
+    raw_abstracts = fetch_semantic_scholar(agent_state["search_query"])
     
     agent_state["raw_abstracts"] = raw_abstracts
-    # Just printing the first 100 chars to keep the terminal clean during the demo
     print(f"         Output: {agent_state['raw_abstracts'][:100]}...\n")
 
     # ==========================================
@@ -81,9 +81,6 @@ def run_agent(user_query, provider="openai"):
     return agent_state
 
 if __name__ == "__main__":
-    # Ensure your API key is exported in your terminal before running:
-    # export OPENAI_API_KEY="your-key"
-    # export GROK_API_KEY="your-grok-key"
     
     # Example Query 
     query = "Compare the performance of architectures like ConvNeXt and EfficientNet for the early detection of diabetic retinopathy."

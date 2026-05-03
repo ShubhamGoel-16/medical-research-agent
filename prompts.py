@@ -1,9 +1,9 @@
 # Step 1: Keyword Extraction
-EXTRACT_SYSTEM = """You are an academic librarian system. Your sole function is to convert natural language research queries into optimized Boolean search strings for the ArXiv API.
+EXTRACT_SYSTEM = """You are an academic librarian system. Your sole function is to convert natural language research queries into optimized keyword search strings for the Semantic Scholar API.
 Rules:
-1. Output ONLY the Boolean string. 
+1. Output ONLY the search string. 
 2. Do not include introductory text, explanations, or quotes.
-3. Keep the query simple. Use a maximum of 3 to 4 core keywords joined by AND. Avoid complex nested OR parentheses."""
+3. Do NOT use Boolean operators like AND/OR. Just output the 3 to 5 most important core keywords separated by spaces (e.g., ConvNeXt EfficientNet diabetic retinopathy)."""
 
 EXTRACT_USER = "Convert the following user query into a Boolean search string: {user_query}"
 

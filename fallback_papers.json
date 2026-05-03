@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Robust Diabetic Retinopathy Grading Using Dual-Resolution Attention-Based Deep Learning",
+    "authors": "Siddharth et al.",
+    "doi": "10.48550/arXiv.2604.17341",
+    "abstract": "The proposed method employs two parallel EfficientNet backbones operating at different spatial resolutions to capture complementary retinal features. The early detection of Diabetic Retinopathy (DR) is an important part of effective treatment, and automated Deep Learning systems offer highly user-friendly alternatives to manual grading by extracting subtle patterns from multi-layered networks."
+  },
+  {
+    "title": "Uncertainty-Aware Ordinal Deep Learning for cross-Dataset Diabetic Retinopathy Grading",
+    "authors": "ArXiv Contributors",
+    "doi": "10.48550/arXiv.2602.10315",
+    "abstract": "To address the limitations of current diagnostic methods, we propose an uncertainty-aware ordinal deep learning framework for DR severity grading. Our method combines a pretrained ConvNeXt-Base visual backbone with a lesion-query attention pooling mechanism that aggregates localized pathological features into a global representation, enabling both accurate severity prediction and principled estimation of predictive uncertainty."
+  },
+  {
+    "title": "Balancing Accuracy and Efficiency: CNN Fusion Models for Diabetic Retinopathy Screening",
+    "authors": "ArXiv Contributors",
+    "doi": "10.48550/arXiv.2512.21861",
+    "abstract": "This work investigates whether feature-level fusion of complementary convolutional neural network (CNN) backbones can deliver accurate binary DR screening. We experimented with pre-trained deep learning models like ResNet50, EfficientNetB0, and DenseNet121 to develop fusion models that synergize the strengths of these architectures, achieving a favorable accuracy-latency balance across globally sourced fundus images."
+  }
+]
